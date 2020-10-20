@@ -25,9 +25,14 @@
 
     <!--------------------------------------- Header Start -------------------------------------->
     <div class="mo-header">
-        <div class="ads">
+        <!-------------------------------------- Overlay background --------------------------------->
+        <div class="overlay-box"></div>
+        <div class="overlay-box2"></div>
+        <div class="overlay-box3"></div>
+        <div class="overlay-box4"></div>
+        <div class="tob-bar">
             <div class="container">
-                <div class="ads-inner">
+                <div class="tob-bar-inner">
                     <p class="free-shipping">الآن لفترة محدودة شحن مجاني للطلبات أكثر من 299 ريال</p>
                     <span class="close-ship lnr lnr-cross"></span>
                     <div class="page-language">
@@ -39,12 +44,22 @@
         <div class="container">
             <div class="header-content">
                 <div class="row">
-                    <div class="col-md-3 col-xs-6">
+                    <div class="hidden-lg hidden-md col-xs-4">
+                        <div class="menu-search">
+                            <div class="search">
+                                <span class="search-icon open-search"></span>
+                            </div>
+                            <div class="menu">
+                                <span class="menu-icon open-menu"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-4">
                         <div class="logo">
                             <a href="#!"><img src="images/logo/logo.png" class="logo-img"></a>
                         </div>
                     </div>
-                    <div class="col-md-9 col-xs-6">
+                    <div class="col-md-9 col-xs-4">
                         <div class="rools">
                             <div class="user-help">
                                 <p class="config-top">
@@ -107,11 +122,8 @@
                                         <button class="click-search"><span class="lnr lnr-magnifier"></span></button>
                                     </div>
                                 </div>
-                                <div class="menu">
-                                    <span class="menu-icon open-menu"></span>
-                                </div>
-                                <div class="search">
-                                    <span class="search-icon open-search"></span>
+                                <div class="fav">
+                                    <span class="fav-icon lnr lnr-heart"></span>
                                 </div>
                                 <div class="shop">
                                     <span class="shop-icon lnr lnr-cart"></span>
@@ -155,7 +167,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-3 col-xs-6">
                     <div class="cat wow animate__zoomIn" data-wow-duration="0.3s">
                         <div class="cat-img-box">
                             <a href="#!"><img class="cat-img" src="images/cats/1.png"></a>
@@ -164,7 +176,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-3 col-xs-6">
                     <div class="cat wow animate__zoomIn" data-wow-duration="0.3s">
                         <div class="cat-img-box">
                             <a href="#!"><img class="cat-img" src="images/cats/2.png"></a>
@@ -173,7 +185,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-3 col-xs-6">
                     <div class="cat wow animate__zoomIn" data-wow-duration="0.3s">
                         <div class="cat-img-box">
                             <a href="#!"><img class="cat-img" src="images/cats/3.png"></a>
@@ -182,7 +194,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-3 col-xs-6">
                     <div class="cat wow animate__zoomIn" data-wow-duration="0.3s">
                         <div class="cat-img-box">
                             <a href="#!"><img class="cat-img" src="images/cats/4.png"></a>
@@ -699,7 +711,6 @@
                     </div>
                 </div>
             </div>
-            <a href="#!" class="show-more wow animate__zoomIn" data-wow-duration="0.9s">عرض المزيد</a>
         </div>
     </div>
     <!-------------------------------------- Sub Slider 2 End ----------------------------------->
@@ -990,12 +1001,20 @@
                 </div>
                 <div class="payment wow animate__zoomIn" data-wow-duration="0.3s">
                     <p class="first-pay">
-                        <img src="images/footer/1.png" class="pay-img">
-                        <img src="images/footer/2.png" class="pay-img">
+                        <div class="pay-box box1">
+                            <img src="images/footer/1.png" class="pay-img">
+                        </div>
+                        <div class="pay-box box2">
+                            <img src="images/footer/2.png" class="pay-img">
+                        </div>
                     </p>
                     <p class="last-pay">
-                        <img src="images/footer/3.png" class="pay-img">
-                        <img src="images/footer/4.png" class="pay-img">
+                        <div class="pay-box box3">
+                            <img src="images/footer/3.png" class="pay-img">
+                        </div>
+                        <div class="pay-box box4">
+                            <img src="images/footer/4.png" class="pay-img">
+                        </div>
                     </p>
                 </div>
             </div>
@@ -1013,13 +1032,6 @@
 
     </div>
     <!------------------------------------------ Footer End ------------------------------------->
-
-
-    <!-------------------------------------- Overlay background --------------------------------->
-    <div class="overlay-box"></div>
-    <div class="overlay-box2"></div>
-    <div class="overlay-box3"></div>
-    <div class="overlay-box4"></div>
 
 
     <!----------------------------------------- Page Overlay ------------------------------------>

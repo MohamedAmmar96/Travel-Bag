@@ -19,6 +19,46 @@ scrollButton.click(function() {
 });
 
 
+$(window).scroll(function() {
+    if (($(this).scrollTop() >= 30) && ($(window).width() >= 992)) {
+        $(".mo-header").css("top", "-34px");
+        $(".mo-header").css("position", "fixed");
+        $(".mo-header").css("z-index", "999");
+        $(".mo-header .header-content .logo").css("width", "35%");
+        $(".mo-nav .nav-link").css("padding", "20px 0 40px 0");
+        // $(".mo-header .header-content .menu").css("height", "57px");
+        // $(".mo-header .header-content .terms").css("height", "57px");
+    } else if (($(window).width() <= 991) && ($(this).scrollTop() >= 50)) {
+        // $(".mo-header").css("top", "0");
+        $(".mo-header").css("top", "-30px");
+        $(".mo-header").css("position", "fixed");
+        $(".mo-header").css("z-index", "999");
+        $(".page-intro").css("display", "none");
+        $(".mo-header .header-content").css("padding", "8px 0 3px 0");
+        // $(".mo-header .header-content .logo").css("width", "70%");
+        // $(".mo-header .header-content .menu-search").css("height", "70px");
+        // $(".mo-header .header-content .terms").css("height", "70px");
+    } else if (($(window).width() <= 991)) {
+        $(".mo-header").css("top", "0");
+        $(".mo-header").css("position", "relative");
+        $(".mo-header").css("z-index", "auto");
+        $(".mo-header .header-content").css("padding", "15px 0 10px 0");
+        // $(".mo-header .header-content .logo").css("width", "80%");
+        // $(".mo-header .header-content .menu-search").css("height", "80px");
+        // $(".mo-header .header-content .terms").css("height", "80px");
+    } else {
+        // $(".page-language").slideDown(300);
+        $(".mo-header").css("top", "0");
+        $(".mo-header").css("position", "relative");
+        $(".mo-header").css("z-index", "auto");
+        $(".mo-header .header-content .logo").css("width", "100%");
+        $(".mo-nav .nav-link").css("padding", "40px 0 40px 0");
+        // $(".mo-header .header-content .menu").css("height", "85px");
+        // $(".mo-header .header-content .terms").css("height", "85px");
+    };
+});
+
+
 var wow = new WOW({
     boxClass: 'wow', // animated element css class (default is wow)
     animateClass: 'animated', // animation css class (default is animated)
@@ -40,24 +80,33 @@ $(document).ready(function() {
 
 
     // This is To Open Mega Menu 
-    $(".terms .nav-list .mega-big-box").click(function() {
-        $(".overlay-box2").slideDown(300);
-    });
+    if (($(window).width() >= 992)) {
+        $(".terms .nav-list .mega-big-box").click(function() {
+            $(".overlay-box2").fadeIn(300);
+        });
 
-    $(".overlay-box2,.terms .nav-list .mega-big-box").click(function() {
-        $(".mega-big-box .arrow").toggleClass("rotate");
-        $(".mega-menu").slideToggle(500);
-        $(".overlay-box2").slideUp(500);
-    });
+        $(".terms .nav-list .mega-big-box").click(function() {
+            $(".mega-big-box .arrow").addClass("rotate");
+            // $(".overlay-box2").fadeOut(500);
+            $(".mega-menu").slideDown(500);
+        });
 
-    // $(".overlay-box2").click(function() {
-    //     $(".overlay-box2").slideUp(500);
-    // });
+        $(".overlay-box2").click(function() {
+            $(".overlay-box2").fadeOut(500);
+        });
 
-    // $(".overlay-box2").click(function() {
-    //     $(".mega-big-box .arrow").removeClass("rotate");
-    //     $(".mega-menu").fadeOut(300);
-    // });
+        $(".overlay-box2").click(function() {
+            $(".mega-big-box .arrow").removeClass("rotate");
+            $(".mega-menu").slideUp(300);
+        });
+    }
+    if (($(window).width() <= 991)) {
+        $(".terms .nav-list .mega-big-box").click(function() {
+            $(".mega-big-box .arrow").toggleClass("rotate");
+            // $(".overlay-box2").fadeOut(500);
+            $(".mega-menu").slideToggle(500);
+        });
+    }
 
 
     // This is To Open Account in Side Menu 
@@ -461,7 +510,7 @@ $(document).ready(function() {
     });
 
     //This is to Open Side Menu
-    $(".terms .menu .menu-icon").click(function() {
+    $(".menu .menu-icon").click(function() {
         $("body").addClass("overflow");
         $(".menu .menu-icon").removeClass("open-menu")
         $(".menu .menu-icon").addClass("close-menu")
@@ -477,12 +526,12 @@ $(document).ready(function() {
 
 
     // This is To Open search Box
-    $(".terms .search .search-icon").click(function() {
+    $(".search .search-icon").click(function() {
         $("body").addClass("overflow");
         $(".overlay-box4").slideDown(500);
     });
 
-    $(".terms .search .search-icon").click(function() {
+    $(".search .search-icon").click(function() {
         $(".search .search-icon").removeClass("open-search")
         $(".search .search-icon").addClass("close-search")
         $(".close-search-btn").fadeIn(300)

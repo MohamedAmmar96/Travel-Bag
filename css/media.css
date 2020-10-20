@@ -1,31 +1,69 @@
     /**************** Extra Small Screens From 501px to 767px ****************/
     
     @media (max-width:767px) {
-        .mo-header .ads {
+        .mo-header .tob-bar {
+            height: 30px;
+        }
+        .tob-bar .free-shipping {
+            font-size: 13px;
+        }
+        html[dir=ltr] .tob-bar .free-shipping {
+            font-size: 12px;
+        }
+        .page-language {
             display: none;
         }
         .mo-header .header-content {
             padding-bottom: 10px;
         }
-        .logo .logo-img {
-            max-width: 50%;
+        .header-content .logo {
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
         }
         .rools .user-help {
             display: none;
         }
         .rools .terms {
-            height: 115px;
+            height: 100px;
             display: flex;
             flex-direction: row;
             align-items: center;
         }
-        .terms .menu,
-        .terms .search {
+        .menu-search {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 100px;
+        }
+        .menu-search .menu,
+        .menu-search .search {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .menu-search .search {
+            margin-left: 30px;
+        }
+        html[dir=ltr] .menu-search .search {
+            margin-left: 0;
+            margin-right: 30px;
+        }
+        .menu-search .menu .menu-icon,
+        .menu-search .search .search-icon {
+            color: #062c6a;
+            font-size: 30px;
+            transition: all 0.4s ease-in-out;
+        }
+        .menu-search .menu:hover .menu-icon,
+        .menu-search .search:hover .search-icon {
+            color: #3aa9e2;
+        }
+        .terms .fav {
             display: flex;
             margin-left: 30px;
         }
-        html[dir=ltr] .terms .menu,
-        html[dir=ltr] .terms .search {
+        html[dir=ltr] .terms .fav {
             margin-left: 0;
             margin-right: 30px;
         }
@@ -160,8 +198,8 @@
             display: none;
         }
         .banner {
-            width: 290px;
-            height: 290px;
+            width: 320px;
+            height: 320px;
             padding: 20px 20px 10px 20px;
         }
         .banner .close-banner {
@@ -172,6 +210,11 @@
             width: 30px;
             height: 30px;
             line-height: 33px;
+        }
+        html[dir=ltr] .banner .close-banner {
+            top: 10px;
+            left: auto;
+            right: 10px;
         }
         .mo-nav .need-help {
             margin-bottom: 0;
@@ -233,7 +276,7 @@
             bottom: 5px;
         }
         .cats {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         .cats .cat {
             margin-bottom: 40px;
@@ -243,6 +286,9 @@
         }
         .cat .cat-img-box {
             margin-bottom: 20px;
+        }
+        .cat .cat-name {
+            font-size: 16px;
         }
         .bestsellers {
             height: auto;
@@ -466,22 +512,28 @@
             margin-bottom: 30px;
         }
         .footer-top .payment {
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: center;
             margin-bottom: 55px;
             margin-top: 40px;
+            text-align: center;
         }
-        .payment .first-pay {
-            margin-bottom: 20px;
+        .payment .pay-box {
+            margin-left: 20px;
+            width: 70px;
         }
-        .payment .first-pay .pay-img:last-child {
+        html[dir=ltr] .payment .pay-box {
+            margin-left: 0;
+            margin-right: 20px;
+        }
+        .payment .box4 {
             margin-left: 0;
         }
-        .payment .pay-img {
-            margin-left: 15px;
-        }
-        html[dir=ltr] .payment .pay-img {
+        html[dir=ltr] .payment .box4 {
             margin-left: 0;
-            margin-right: 15px;
+        }
+        .payment .pay-box .pay-img {
+            width: 100%;
         }
         .footer-bottom .copyrights {
             flex-direction: column;
@@ -560,18 +612,39 @@
     
     @media (max-width: 500px) {
         .rools .terms {
-            height: 80px;
+            height: 70px;
             display: flex;
             flex-direction: row;
             align-items: center;
         }
-        .terms .menu,
-        .terms .search {
+        .header-content .logo {
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .menu-search {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 70px;
+        }
+        .menu-search .search {
+            margin-left: 20px;
+        }
+        html[dir=ltr] .menu-search .search {
+            margin-left: 0;
+            margin-right: 20px;
+        }
+        .banner {
+            width: 290px;
+            height: 290px;
+            padding: 20px 20px 10px 20px;
+        }
+        .terms .fav {
             display: flex;
             margin-left: 20px;
         }
-        html[dir=ltr] .terms .menu,
-        html[dir=ltr] .terms .search {
+        html[dir=ltr] .terms .fav {
             margin-left: 0;
             margin-right: 20px;
         }
@@ -602,35 +675,87 @@
         .two .email-box {
             width: calc(100% - 10%);
         }
+        .payment .pay-box {
+            margin-left: 15px;
+            width: 60px;
+        }
+        html[dir=ltr] .payment .pay-box {
+            margin-left: 0;
+            margin-right: 15px;
+        }
+        .payment .box3 {
+            width: 70px;
+        }
+        .payment .box4 {
+            margin-left: 0;
+        }
+        html[dir=ltr] .payment .box4 {
+            margin-left: 0;
+        }
     }
     /*********************  Small Screens *********************/
     
     @media (min-width: 768px) and (max-width: 991px) {
-        .mo-header .ads {
+        .mo-header .tob-bar {
+            height: 30px;
+        }
+        .tob-bar .free-shipping {
+            font-size: 13px;
+        }
+        .page-language {
             display: none;
         }
         .mo-header .header-content {
             padding-bottom: 10px;
         }
-        .logo .logo-img {
-            max-width: 50%;
+        .header-content .logo {
+            width: 40%;
+            margin-left: auto;
+            margin-right: auto;
         }
         .rools .user-help {
             display: none;
         }
         .rools .terms {
-            height: 115px;
+            height: 95px;
             display: flex;
             flex-direction: row;
             align-items: center;
         }
-        .terms .menu,
-        .terms .search {
+        .menu-search {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 95px;
+        }
+        .menu-search .menu,
+        .menu-search .search {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .menu-search .search {
+            margin-left: 30px;
+        }
+        html[dir=ltr] .menu-search .search {
+            margin-left: 0;
+            margin-right: 30px;
+        }
+        .menu-search .menu .menu-icon,
+        .menu-search .search .search-icon {
+            color: #062c6a;
+            font-size: 30px;
+            transition: all 0.4s ease-in-out;
+        }
+        .menu-search .menu:hover .menu-icon,
+        .menu-search .search:hover .search-icon {
+            color: #3aa9e2;
+        }
+        .terms .fav {
             display: flex;
             margin-left: 30px;
         }
-        html[dir=ltr] .terms .menu,
-        html[dir=ltr] .terms .search {
+        html[dir=ltr] .terms .fav {
             margin-left: 0;
             margin-right: 30px;
         }
@@ -765,8 +890,8 @@
             display: none;
         }
         .banner {
-            width: 290px;
-            height: 290px;
+            width: 350px;
+            height: 350px;
             padding: 20px 20px 10px 20px;
         }
         .banner .close-banner {
@@ -777,6 +902,10 @@
             width: 30px;
             height: 30px;
             line-height: 33px;
+        }
+        html[dir=ltr] .banner .close-banner {
+            left: auto;
+            right: 10px;
         }
         .mo-nav .need-help {
             margin-bottom: 0;
@@ -1071,22 +1200,26 @@
             margin-bottom: 30px;
         }
         .footer-top .payment {
-            flex-direction: column;
+            flex-direction: row;
             margin-bottom: 55px;
             margin-top: 40px;
         }
-        .payment .first-pay {
-            margin-bottom: 20px;
+        .payment .pay-box {
+            margin-left: 20px;
+            width: 70px;
         }
-        .payment .first-pay .pay-img:last-child {
+        html[dir=ltr] .payment .pay-box {
+            margin-left: 0;
+            margin-right: 20px;
+        }
+        .payment .box4 {
             margin-left: 0;
         }
-        .payment .pay-img {
-            margin-left: 15px;
-        }
-        html[dir=ltr] .payment .pay-img {
+        html[dir=ltr] .payment .box4 {
             margin-left: 0;
-            margin-right: 15px;
+        }
+        .payment .pay-box .pay-img {
+            width: 100%;
         }
         .footer-bottom .copyrights {
             flex-direction: column;
