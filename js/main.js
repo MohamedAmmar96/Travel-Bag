@@ -24,8 +24,9 @@ $(window).scroll(function() {
         $(".mo-header").css("top", "-34px");
         $(".mo-header").css("position", "fixed");
         $(".mo-header").css("z-index", "999");
-        $(".mo-header .header-content .logo").css("width", "35%");
-        $(".mo-nav .nav-link").css("padding", "20px 0 40px 0");
+        $(".mo-header .header-content .logo").css("width", "25%");
+        $(".mo-nav .nav-link").css("padding", "25px 0 30px 0");
+        $(".rools .user-help").hide(300);
         // $(".mo-header .header-content .menu").css("height", "57px");
         // $(".mo-header .header-content .terms").css("height", "57px");
     } else if (($(window).width() <= 991) && ($(this).scrollTop() >= 50)) {
@@ -53,6 +54,7 @@ $(window).scroll(function() {
         $(".mo-header").css("z-index", "auto");
         $(".mo-header .header-content .logo").css("width", "100%");
         $(".mo-nav .nav-link").css("padding", "40px 0 40px 0");
+        $(".rools .user-help").show(300);
         // $(".mo-header .header-content .menu").css("height", "85px");
         // $(".mo-header .header-content .terms").css("height", "85px");
     };
@@ -345,7 +347,7 @@ $(document).ready(function() {
         autoplay: true,
         autoplayTimeout: 4000,
         margin: 30,
-        stagePadding: 10,
+        stagePadding: 17,
         rtl: true,
         navText: ["<span class='lnr lnr-chevron-right'></span>", "<span class='lnr lnr-chevron-left'></span>"],
         responsiveClass: true,

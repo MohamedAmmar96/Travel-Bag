@@ -394,6 +394,9 @@
         .sub-slider .item-img-box .timer {
             width: 140px;
         }
+        html[dir=ltr] .sub-slider .item-content .item-name {
+            font-size: 16px;
+        }
         .sub-slider .colors-list .color-li {
             margin-left: 5px;
             width: 30px;
